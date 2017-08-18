@@ -194,6 +194,13 @@ func (m *Mesos) loadFromMaster(ip string, port string) (sj state.State, err erro
 func (m *Mesos) parseState(sj state.State) {
 	log.Debug("Running parseState")
 
+	var mlb_addr []string
+
+	masters := m.getMasters()
+	for _, master := range masters {
+		mlb_addr = append(mlb_addr, master.Ip)
+	}
+
 	m.RegisterHosts(sj)
 	log.Debug("Done running RegisterHosts")
 
@@ -204,8 +211,10 @@ func (m *Mesos) parseState(sj state.State) {
 		for _, task := range fw.Tasks {
 			agent, ok := m.Agents[task.SlaveID]
 			if ok && task.State == "TASK_RUNNING" {
-				task.SlaveIP = agent
-				m.registerTask(&task, agent)
+				for _, address := range mlb_addr {
+					task.SlaveIP = address
+					m.registerTask(&task, agent)
+				}
 			}
 		}
 	}

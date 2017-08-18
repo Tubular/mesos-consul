@@ -8,10 +8,10 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/jamespitt/mesos-consul/config"
-	"github.com/jamespitt/mesos-consul/consul"
-	"github.com/jamespitt/mesos-consul/registry"
-	"github.com/jamespitt/mesos-consul/state"
+	"github.com/Tubular/mesos-consul/config"
+	"github.com/Tubular/mesos-consul/consul"
+	"github.com/Tubular/mesos-consul/registry"
+	"github.com/Tubular/mesos-consul/state"
 
 	proto "github.com/mesos/mesos-go/api/v0/mesosproto"
 	log "github.com/sirupsen/logrus"

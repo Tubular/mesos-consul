@@ -4,8 +4,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/jamespitt/mesos-consul/registry"
-	"github.com/jamespitt/mesos-consul/state"
+	"github.com/Tubular/mesos-consul/registry"
+	"github.com/Tubular/mesos-consul/state"
 )
 
 type CheckVar struct {

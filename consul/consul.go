@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/jamespitt/mesos-consul/registry"
+	"github.com/Tubular/mesos-consul/registry"
 
 	consulapi "github.com/hashicorp/consul/api"
 	log "github.com/sirupsen/logrus"

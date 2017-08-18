@@ -1,4 +1,4 @@
-package: github.com/jamespitt/mesos-consul
+package: github.com/Tubular/mesos-consul
 import:
 - package: github.com/hashicorp/consul
   subpackages:

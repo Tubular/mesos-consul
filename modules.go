@@ -1,5 +1,5 @@
 package main
 
 import (
-	_ "github.com/jamespitt/mesos-consul/consul"
+	_ "github.com/Tubular/mesos-consul/consul"
 )
